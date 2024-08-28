@@ -1,0 +1,208 @@
+:root {
+    --color-primario: #0a3871;
+    --color-secundario: #ffffff;
+    --transparencia: rgba(0,0,0,0);
+}
+
+* {
+    background-color: #f3f5fc;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+html{
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: .5rem;
+}
+.header {
+    display: flex;
+    justify-content: flex-start;
+}
+.logo {
+    padding-top: .5rem;
+    margin-left: .5rem;
+    width: 90%;
+}
+.contenido__entrada{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50%;
+}
+.text-area {
+    border: none;
+    color: var(--color-primario);
+    margin-top: 1rem;
+    text-transform: lowercase;
+    height: 100%;
+    resize: none;
+}
+::placeholder {
+    color: #0a3871;
+    font-size: 1.5rem;
+}
+.text-area:focus {
+    outline: none;
+}
+.btn-desencriptar {
+    background-color: #d8dfe8;
+    border: 1px solid var(--color-primario);
+    border-radius: 1.5rem;
+    color: #0a3871;
+    cursor: pointer;
+    height: 2.2rem;
+    width: 10rem;
+    font-size: 1rem;
+}
+.btn-encriptar {
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+    border-radius: 1.5rem;
+    color: white;
+    cursor: pointer;
+    height: 2.2rem;
+    width: 10rem;
+    font-size: 1rem;
+}
+.resultado {
+    width: 15rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+.mensaje {
+    width: 90%;
+    background-color: var(--transparencia);
+    background-image: url("../assets/Muñeco.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    border: none;
+    color: var(--color-primario);
+    height: 90%;
+    overflow: hidden;
+    resize: none;
+}
+.mensaje:focus {
+    outline: none;
+}
+.textos{
+    background-color: var(--transparencia)
+}
+.text2 {
+    text-align: Center;
+    background-color: var(--transparencia);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.text {
+    text-align: Center;
+    background-color: var(--transparencia);
+    font-size: 0.6rem;
+}
+.botones {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.btn-copiar {
+    border: 1px solid var(--color-primario);
+    color: var(--color-primario);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    height: 2.2rem;
+    width: 10rem;
+    font-size: 1rem;
+}
+.informacion {
+    color: #495057;
+    font-size: 0.5rem;
+}
+.footer{
+    margin-top: 1rem;
+    background-color: var(--color-primario);
+    text-align: center;
+    font-size: .8rem;
+    padding: .8rem;
+    font-weight: 400;
+    color: var(--color-secundario);
+    /* border-radius: 1rem; */
+}
+
+@media (max-width: 1200px) {
+    .body {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resultado{
+        padding: 3%;
+        width: 80%;
+    }
+    .mensaje {
+        display: none;
+        background-image: none;
+        font-size: 0.8rem;
+    }
+    .text2 {
+        font-size: 0.8rem;
+    }
+    .text {
+        font-size: 0.6rem;
+    }
+}
+@media (max-width: 700px) {
+    .text-area{
+        width: 90%;
+        padding: 3%;
+        font-size: 1.2rem;
+    }
+    .botones {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text2 {
+        font-size: .8rem;
+    }
+    .text {
+        font-size: 0.6rem;
+    }
+    .informacion {
+        text-align: center;
+    }
+    .mensaje {
+        padding: 3%;
+        width: auto;
+        background-image: none;
+        height: auto;
+        font-size: 1rem;
+        text-align: center;
+    }
+    ::placeholder {
+        font-size: 1rem;
+        text-align: justify;
+    }
+}
